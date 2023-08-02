@@ -1,0 +1,553 @@
+/* ============================== GOOGLE FONTS ========================= */
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;500;600&display=swap");
+
+/* ============================== CSS VARIABLES ======================== */
+:root {
+  --header-height: 3.5rem; /* 56px */
+
+  /* Colors */
+  --body-bg-color: #fff;
+  --bg-color: #f0f2ff;
+  --main-color: #007bff;
+  --main-color-alt: #ff1744;
+  --title-color: #0052cc;
+  --text-color: #080052;
+  --accent-color: #a0bfe0;
+  --neutral-color: #0c0450;
+  --neutral-color-light: #fff;
+
+  /* Font and Typography */
+  --body-font: "Nunito", sans-serif;
+  --extra-big-font-size: 3.5rem;
+  --big-font-size: 2.5rem;
+  --h1-font-size: 2rem;
+  --h2-font-size: 1.5rem;
+  --h3-font-size: 1.25rem;
+  --normal-font-size: 1rem;
+  --small-font-size: 0.9rem;
+}
+
+/* ============================== CSS RESET =========================== */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--body-font);
+  background-color: var(--body-bg-color);
+  color: var(--text-color);
+}
+
+button,
+input {
+  font-family: var(--body-font);
+  font-size: var(--normal-font-size);
+  color: var(--normal-font-size);
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  outline: none;
+}
+
+/* ============================== REUSABLE CSS CLASSES ================= */
+.container {
+  max-width: 1000px;
+  margin-inline: auto;
+}
+
+.section {
+  padding-block: 8rem 1rem;
+}
+
+.section-title,
+.section-title-center {
+  font-size: var(--h1-font-size);
+  color: var(--title-color);
+  margin-bottom: 2rem;
+  line-height: 140%;
+}
+
+.section-title-center {
+  text-align: center;
+}
+
+.main {
+  overflow: hidden;
+}
+
+/* ============================== HEADER =============================== */
+.header {
+  width: 100%;
+  background-color: #fff;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+}
+
+/* ============================== NAV ================================== */
+.nav {
+  height: calc(var(--header-height) + 1.5rem);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  column-gap: 3rem;
+}
+
+.nav-logo {
+  text-transform: capitalize;
+  font-family: "Nunito", sans-serif;
+  font-size: 1.15rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  display: flex;
+  align-items: center;
+  column-gap: 0.2rem;
+  transition: 0.3s;
+  color: var(--title-color);
+}
+
+.nav-logo:hover {
+  color: var(--main-color);
+}
+
+.nav-logo-icon {
+  color: var(--main-color);
+}
+
+.nav-menu {
+  margin-left: auto;
+}
+
+.nav-list {
+  display: flex;
+  column-gap: 3rem;
+}
+
+.nav-link {
+  position: relative;
+  color: var(--text-color);
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.nav-link:hover {
+  color: var(--main-color);
+}
+
+/* Button */
+.button {
+  display: inline-block;
+  background-color: var(--main-color);
+  color: #fff;
+  padding: 1rem 1.75rem;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.button:hover {
+  background-color: #006fe6;
+}
+
+.button-flex {
+  display: inline-flex;
+  align-items: center;
+  column-gap: 0.5rem;
+}
+
+.button-link {
+  color: #006fe6;
+  font-weight: 600;
+}
+
+.button-icon {
+  transition: 0.3s;
+}
+
+.button:hover .button-icon {
+  transform: translateX(0.25rem);
+}
+
+.button-link:hover .button-icon {
+  transform: translateX(0.25rem);
+}
+
+/* Change Background Header */
+.scroll-header {
+  box-shadow: 0 1px 4px rgba(160, 191, 224, 0.1);
+}
+
+/* Active Link */
+.active-link {
+  color: var(--main-color);
+}
+
+/* ============================== HOME ============================== */
+.home {
+  padding-block: 5rem;
+}
+
+.home-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.home-img {
+  width: 450px;
+  order: 1;
+}
+
+.home-data {
+  width: 50%;
+}
+
+.home-title {
+  font-size: var(--extra-big-font-size);
+  line-height: 140%;
+  margin-bottom: 1rem;
+}
+
+.home-title .truth {
+  color: var(--main-color);
+}
+
+.home-title .hoaxes {
+  color: var(--main-color-alt);
+}
+
+.home-description {
+  margin-bottom: 2.5rem;
+  padding-right: 5.5rem;
+  line-height: 1.7rem;
+}
+
+.home-social {
+  position: absolute;
+  top: 30%;
+  right: -3rem;
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  align-items: center;
+  row-gap: 4.5rem;
+}
+
+.home-social-text {
+  font-size: var(--normal-font-size);
+  font-weight: 600;
+  color: var(--main-color);
+  position: relative;
+  transform: rotate(90deg);
+}
+
+.home-social-text::after {
+  content: "";
+  position: absolute;
+  width: 1.5rem;
+  height: 2px;
+  background-color: var(--main-color);
+  right: -52%;
+  top: 50%;
+}
+
+.home-social-links {
+  display: flex;
+  flex-direction: column;
+  row-gap: 0.25rem;
+}
+
+.home-social-link {
+  font-size: var(--normal-font-size);
+  color: var(--main-color);
+  transition: 0.3s;
+}
+
+.home-social-link:hover {
+  transform: translateX(0.25rem);
+}
+
+/* ============================== ABOUT ================================ */
+.about-container {
+  display: flex;
+  column-gap: 7rem;
+  align-items: center;
+}
+
+.about-img {
+  width: 400px;
+}
+
+.about-title {
+  margin-bottom: 1rem;
+}
+
+.about-description {
+  margin-bottom: 2rem;
+  line-height: 150%;
+}
+
+.about-details {
+  display: flex;
+  flex-direction: column;
+  row-gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.about-details-description {
+  display: flex;
+  column-gap: 0.5rem;
+  font-size: var(--normal-font-size);
+}
+
+.about-details-icon {
+  font-size: var(--normal-font-size);
+  color: var(--main-color);
+  margin-top: 0.15rem;
+}
+
+.about-description-end {
+  margin-bottom: 2.5rem;
+  line-height: 150%;
+}
+
+/* ============================ HOAX DETECTION ===================== */
+.hoax-detection-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 2rem;
+  padding-top: 1rem;
+}
+
+.hoax-detection-card {
+  width: 30%;
+  background-color: var(--bg-color);
+  padding: 2.5rem 1.5rem 2rem;
+  border-radius: 1rem;
+}
+
+.hoax-card-number {
+  display: inline-block;
+  background-color: var(--main-color);
+  color: #fff;
+  font-size: var(--h3-font-size);
+  padding: 0.5rem 0.75rem;
+  margin-bottom: 1.5rem;
+  border-radius: 0.25rem;
+  transition: 0.3s;
+}
+
+.hoax-detection-card:hover .hoax-card-number {
+  transform: translateY(-0.25rem);
+}
+
+.hoax-card-title {
+  font-size: var(--normal-font-size);
+  color: var(--title-color);
+  margin-bottom: 0.5rem;
+}
+
+.hoax-card-description {
+  font-size: var(--small-font-size);
+  color: var(--text-color);
+}
+
+/* ============================ DIGITAL LITERACY =================== */
+.digital-literacy-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  column-gap: 2.5rem;
+}
+
+.digital-literacy-left-section {
+  width: 43%;
+}
+
+.digital-literacy-title-left {
+  color: var(--title-color);
+  font-size: var(--h1-font-size);
+  line-height: 150%;
+}
+
+.digital-literacy-description {
+  color: var(--text-color);
+  font-size: var(--normal-font-size);
+  line-height: 150%;
+  padding-right: 2.5rem;
+}
+
+.digital-literacy-right-section {
+  width: 57%;
+  padding-left: 2rem;
+}
+
+.digital-literacy-topics-title {
+  color: var(--title-color);
+  font-size: var(--h2-font-size);
+}
+
+.digital-literacy-list-topics {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 2.5rem 2rem;
+}
+
+.digital-literacy-topic {
+  width: 45%;
+}
+
+.digital-literacy-topic-icon {
+  display: inline-block;
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+  background-color: hsl(211, 51%, 90%);
+  border-radius: 50%;
+  font-size: var(--h3-font-size);
+  color: var(--text-color);
+}
+
+.digital-literacy-topic-title {
+  color: var(--text-color);
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.digital-literacy-topic-desc {
+  color: var(--text-color);
+  font-size: var(--small-font-size);
+}
+
+/* ============================ JOIN US ============================ */
+.join-box {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  margin-bottom: 5rem;
+}
+
+.join-title {
+  font-size: var(--h1-font-size);
+  color: var(--title-color);
+}
+
+.join-description {
+  padding-inline: 10rem;
+  font-size: var(--normal-font-size);
+  color: var(--text-color);
+  font-weight: 500;
+  line-height: 180%;
+}
+
+.join-inputs {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 2.5rem 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.join-formel {
+  flex-basis: 45%;
+  position: relative;
+  height: 3rem;
+  border-bottom: 1px solid var(--accent-color);
+}
+
+.join-input {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 1rem 1rem 1rem 0;
+  background: none;
+  color: var(--text-color);
+  border: none;
+  outline: none;
+  z-index: 1;
+}
+
+.join-label {
+  position: absolute;
+  top: 0.75rem;
+  width: 100%;
+  font-size: var(--small-font-size);
+  color: var(--text-color);
+  transition: 0.3s;
+}
+
+.join-input:focus + .join-label {
+  top: -0.75rem;
+  left: 0;
+  font-size: 0.75rem;
+  z-index: 10;
+}
+
+.join-input:not(:placeholder-shown).join-input:not(:focus) + .join-label {
+  top: -0.75rem;
+  font-size: 0.75rem;
+  z-index: 10;
+}
+
+.join-check {
+  display: flex;
+  align-items: center;
+  column-gap: 0.5rem;
+  margin-bottom: 2rem;
+}
+
+.join-check input {
+  cursor: pointer;
+}
+
+.button-join {
+  padding: 0.75rem 2rem;
+}
+
+.warning {
+  display: inline-block;
+  margin-left: 1rem;
+  color: red;
+  font-weight: 600;
+}
+
+/* ============================== FOOTER =============================== */
+.footer {
+  text-align: center;
+  font-size: var(--small-font-size);
+  font-weight: 700;
+  color: var(--main-color);
+  margin: 7rem 0 2rem;
+}
+
+/* ============================== SCROLL BAR =========================== */
+::-webkit-scrollbar {
+  width: 0.6rem;
+  background: #f0f2ff;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #a0bfe04d;
+  border-radius: 0.5rem;
+}
