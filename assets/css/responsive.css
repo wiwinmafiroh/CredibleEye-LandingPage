@@ -1,0 +1,312 @@
+/* ============================== BREAKPOINTS ========================== */
+@media screen and (max-width: 1200px) {
+  /* REUSABLE CSS CLASSES */
+  .section,
+  .home {
+    padding-block: 7rem 1rem;
+  }
+
+  .section-title,
+  .section-title-center {
+    font-size: var(--h2-font-size);
+    line-height: 140%;
+  }
+
+  /* HOME */
+  .home-container {
+    justify-content: space-around;
+  }
+
+  .home-img {
+    width: 400px;
+  }
+
+  .home-data {
+    width: 60%;
+  }
+
+  .home-title {
+    font-size: var(--big-font-size);
+  }
+
+  .home-description {
+    padding-right: 0;
+  }
+
+  .home-social {
+    right: -1.5rem;
+  }
+
+  /* ABOUT */
+  .about-container {
+    column-gap: 2rem;
+  }
+
+  .about-details-description {
+    font-size: var(--small-font-size);
+    column-gap: 0.3rem;
+  }
+
+  .about-img {
+    width: 380px;
+  }
+
+  /* HOAX DETECTION */
+  .hoax-detection-container {
+    justify-content: center;
+    align-items: center;
+    gap: 2.5rem;
+  }
+
+  .hoax-detection-card {
+    width: 40%;
+  }
+
+  /* DIGITAL LITERACY */
+  .digital-literacy-left-section,
+  .digital-literacy-right-section {
+    width: 100%;
+  }
+
+  .digital-literacy-container {
+    flex-direction: column;
+    row-gap: 2rem;
+    align-items: initial;
+    padding-inline: 2rem;
+  }
+
+  .digital-literacy-right-section {
+    padding: 0;
+  }
+
+  .digital-literacy-list-topics {
+    gap: 2.5rem;
+  }
+
+  /* JOIN US */
+  .join-box {
+    margin-bottom: 2.5rem;
+  }
+
+  .join-description {
+    padding-inline: 2rem;
+    line-height: 150%;
+  }
+
+  .join-inputs {
+    gap: 2.5rem 1.5rem;
+    align-items: center;
+  }
+
+  /* FOOTER */
+  .footer {
+    margin-top: 6rem;
+  }
+}
+
+@media screen and (max-width: 1050px) {
+  /* REUSABLE CSS CLASSES */
+  .container {
+    margin-inline: 1.5rem;
+  }
+}
+
+@media screen and (max-width: 799px) {
+  /* Navigation For Mobile Devices */
+  .nav-menu {
+    position: fixed;
+    background-color: #fff;
+    width: 80%;
+    height: 100%;
+    top: 0;
+    right: -100%;
+    box-shadow: 0 1px 4px rgba(56, 80, 102, 0.1);
+    padding: 5rem 0 0 3rem;
+    border-radius: 1rem 0 0 1rem;
+    transition: 0.3s;
+    z-index: 100;
+  }
+
+  .nav-list {
+    display: flex;
+    flex-direction: column;
+    row-gap: 2.5rem;
+  }
+
+  .nav-toggle {
+    display: inline-flex;
+    font-size: 1.25rem;
+    cursor: pointer;
+  }
+
+  .nav-close {
+    display: initial;
+    font-size: 1.5rem;
+    position: absolute;
+    top: 1.5rem;
+    right: 1.25rem;
+    cursor: pointer;
+  }
+
+  /* Show Menu */
+  .show-menu {
+    right: 0;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  /* CSS VARIABLES */
+  /* Responsive Typography */
+  :root {
+    --extra-big-font-size: 2.5rem;
+    --big-font-size: 2rem;
+    --h1-font-size: 1.5rem;
+    --h2-font-size: 1.25rem;
+    --h3-font-size: 1rem;
+    --normal-font-size: 0.938rem;
+    --small-font-size: 0.813rem;
+  }
+
+  /* REUSABLE CSS CLASSES */
+  .section,
+  .home {
+    padding-block-start: 6rem;
+  }
+
+  .section-title,
+  .section-title-center {
+    margin-bottom: 1.25rem;
+  }
+
+  .home-container,
+  .about-container,
+  .hoax-detection-container,
+  .digital-literacy-list-topics {
+    flex-direction: column;
+    row-gap: 1rem;
+  }
+
+  /* HOME */
+  .home-data {
+    width: 100%;
+  }
+
+  .home-description {
+    margin-bottom: 2rem;
+  }
+
+  .home-social {
+    display: none;
+  }
+
+  /* ABOUT */
+  .about-img {
+    order: 1;
+  }
+
+  .about-description,
+  .about-details {
+    margin-bottom: 1rem;
+  }
+
+  .about-details {
+    row-gap: 0.75rem;
+  }
+
+  .about-details-description {
+    font-size: var(--normal-font-size);
+  }
+
+  .about-description-end {
+    margin-bottom: 2rem;
+  }
+
+  /* HOAX DETECTION */
+  .hoax-detection-container {
+    row-gap: 2rem;
+  }
+
+  .hoax-detection-card {
+    height: initial;
+    width: 90%;
+    padding-right: 1rem;
+  }
+
+  .hoax-card-title {
+    font-size: var(--h3-font-size);
+  }
+
+  .hoax-card-description {
+    font-size: var(--normal-font-size);
+    line-height: 150%;
+  }
+
+  /* DIGITAL LITERACY */
+  .digital-literacy-container {
+    row-gap: 2.5rem;
+    padding-inline: 0;
+  }
+
+  .digital-literacy-title-left {
+    text-align: center;
+  }
+
+  .digital-literacy-description {
+    padding-right: 0;
+  }
+
+  .digital-literacy-list-topics {
+    row-gap: 2rem;
+  }
+
+  .digital-literacy-topic {
+    width: 100%;
+  }
+
+  /* JOIN US */
+  .join-box {
+    margin-bottom: 2rem;
+  }
+
+  .join-description {
+    padding-inline: 0;
+    text-align: initial;
+  }
+
+  .join-formel {
+    flex-basis: 100%;
+  }
+
+  .join-inputs {
+    margin-bottom: 1.5rem;
+  }
+
+  /* FOOTER */
+  .footer {
+    font-size: 12px;
+  }
+}
+
+@media screen and (max-width: 389px) {
+  /* HOME */
+  .home-img {
+    width: 350px;
+  }
+
+  /* ABOUT */
+  .about-img {
+    width: 350px;
+  }
+}
+
+@media screen and (max-width: 350px) {
+  /* HOME */
+  .home-img {
+    width: 300px;
+  }
+
+  /* ABOUT */
+  .about-img {
+    width: 300px;
+  }
+}

@@ -120,6 +120,11 @@ button {
   align-items: center;
   column-gap: 0.2rem;
   transition: 0.3s;
+}
+
+.nav-logo,
+.nav-close,
+.nav-toggle {
   color: var(--title-color);
 }
 
@@ -148,6 +153,21 @@ button {
 }
 
 .nav-link:hover {
+  color: var(--main-color);
+}
+
+.nav-toggle,
+.nav-close {
+  display: none;
+}
+
+/* Change Background Header */
+.scroll-header {
+  box-shadow: 0 1px 4px rgba(160, 191, 224, 0.1);
+}
+
+/* Active Link */
+.active-link {
   color: var(--main-color);
 }
 
@@ -189,19 +209,9 @@ button {
   transform: translateX(0.25rem);
 }
 
-/* Change Background Header */
-.scroll-header {
-  box-shadow: 0 1px 4px rgba(160, 191, 224, 0.1);
-}
-
-/* Active Link */
-.active-link {
-  color: var(--main-color);
-}
-
 /* ============================== HOME ============================== */
 .home {
-  padding-block: 5rem;
+  padding-block: 6rem;
 }
 
 .home-container {
@@ -339,6 +349,7 @@ button {
 
 .hoax-detection-card {
   width: 30%;
+  height: 230px;
   background-color: var(--bg-color);
   padding: 2.5rem 1.5rem 2rem;
   border-radius: 1rem;
@@ -424,6 +435,12 @@ button {
   border-radius: 50%;
   font-size: var(--h3-font-size);
   color: var(--text-color);
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.digital-literacy-topic:hover .digital-literacy-topic-icon {
+  background-color: var(--main-color);
+  color: var(--neutral-color-light);
 }
 
 .digital-literacy-topic-title {
@@ -544,10 +561,10 @@ button {
 /* ============================== SCROLL BAR =========================== */
 ::-webkit-scrollbar {
   width: 0.6rem;
-  background: #f0f2ff;
+  background: hsla(211, 51%, 75%, 0.302);
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #a0bfe04d;
+  background: hsla(211, 51%, 60%, 0.302);
   border-radius: 0.5rem;
 }

@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>CredibleEye</title>
 
     <!-- ============================== FAVICON ============================== -->
     <link
@@ -20,8 +21,7 @@
 
     <!-- ============================== CSS ================================== -->
     <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
-
-    <title>CredibleEye</title>
+    <link rel="stylesheet" href="assets/css/responsive.css" />
   </head>
   <body>
     <!-- Tambahkan kode kalian di sini -->
@@ -38,19 +38,33 @@
             <li class="nav-item">
               <a href="#home" class="nav-link active-link">Home</a>
             </li>
+
             <li class="nav-item">
               <a href="#about" class="nav-link">About</a>
             </li>
+
             <li class="nav-item">
               <a href="#hoax-detection" class="nav-link">Hoax Detection</a>
             </li>
+
             <li class="nav-item">
               <a href="#digital-literacy" class="nav-link">Digital Literacy</a>
             </li>
+
             <li class="nav-item">
               <a href="#join" class="nav-link">Join Us</a>
             </li>
           </ul>
+
+          <!-- Close Button -->
+          <div id="nav-close" class="nav-close">
+            <i class="ri-close-line"></i>
+          </div>
+        </div>
+
+        <!-- Toggle Button -->
+        <div id="nav-toggle" class="nav-toggle">
+          <i class="ri-menu-line"></i>
         </div>
       </nav>
     </header>
@@ -97,6 +111,7 @@
               >
                 <i class="ri-pages-line"></i>
               </a>
+
               <a
                 href="https://www.linkedin.com/company/skilvul/"
                 target="_blank"
@@ -104,6 +119,7 @@
               >
                 <i class="ri-linkedin-box-line"></i>
               </a>
+
               <a
                 href="https://www.instagram.com/skilvul/"
                 target="_blank"
@@ -139,10 +155,12 @@
                 <i class="ri-checkbox-fill about-details-icon"></i>
                 Equip digital minds, discern fact from fiction.
               </p>
+
               <p class="about-details-description">
                 <i class="ri-checkbox-fill about-details-icon"></i>
                 Provide digital literacy, effective hoax detection.
               </p>
+
               <p class="about-details-description">
                 <i class="ri-checkbox-fill about-details-icon"></i>
                 Foster truth-seekers, spread credible information.
@@ -371,11 +389,11 @@
             </div>
 
             <div class="join-check">
-              <label for="status" id="check">
-                Dengan ini saya menyatakan data yang diisi pada form ini adalah
-                benar dan telah sesuai
-              </label>
               <input type="checkbox" id="status" />
+              <label for="status" id="check">
+                I hereby declare that the data in this form is accurate and
+                precisely matched
+              </label>
             </div>
 
             <button
@@ -393,7 +411,9 @@
     </main>
 
     <!-- ============================== FOOTER =============================== -->
-    <footer class="footer">&#169; CredibleEye. All rigths reserved</footer>
+    <footer class="footer">
+      &#169; CredibleEye by Wiwin Mafiroh. All rights reserved.
+    </footer>
 
     <!-- ============================== JS =================================== -->
     <script src="assets/js/script.js"></script>
