@@ -252,6 +252,7 @@
   }
 
   .digital-literacy-description {
+    font-size: initial;
     padding-right: 0;
   }
 
@@ -263,13 +264,14 @@
     width: 100%;
   }
 
-  /* JOIN US */
-  .join-box {
-    margin-bottom: 2rem;
+  .digital-literacy-topic-desc {
+    font-size: var(--normal-font-size);
   }
 
+  /* JOIN US */
   .join-description {
     padding-inline: 0;
+    font-size: initial;
     text-align: initial;
   }
 
@@ -279,6 +281,10 @@
 
   .join-inputs {
     margin-bottom: 1.5rem;
+  }
+
+  #check {
+    font-size: var(--normal-font-size);
   }
 
   /* FOOTER */
